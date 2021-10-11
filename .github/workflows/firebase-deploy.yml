@@ -8,12 +8,6 @@ name: Deploy to Firebase Hosting on merge
       - master
       - main
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn
-      - run: yarn test
   build_and_deploy:
     needs: tests
     runs-on: ubuntu-latest
